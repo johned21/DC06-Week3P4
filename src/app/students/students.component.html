@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h1>List of Students</h1>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Colleges
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <li><a class="dropdown-item" href="#" (click)="showCAST()">CAST</a></li>
+                            <li><a class="dropdown-item" href="#" (click)="showCOE()">COE</a></li>
+                            <li><a class="dropdown-item" href="#" (click)="showCON()">CON</a></li>
+                            <li><a class="dropdown-item" href="#" (click)="showCCJ()">CCJ</a></li>
+                            <li><a class="dropdown-item" href="#" (click)="showCABMH()">CABM-H</a></li>
+                            <li><a class="dropdown-item" href="#" (click)="showCABMB()">CABM-B</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <div class="buttons">
+                        <button class="btn btn-info" (click)="showFemale()">Female</button>
+                        <button class="btn btn-info" (click)="showMale()">Male</button>
+                        <button class="btn btn-info" (click)="showAll()">All</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div data-bs-spy="scroll" data-bs-target="" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <ul class="list-group list-group-numbered">
+                            <li *ngFor="let student of output" class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">{{ student.name }}</div>
+                                    {{ student.age }} years old
+                                </div>
+                                <div class="coll">
+                                    {{ student.college }}
+                                </div>
+                                <span class="badge bg-success rounded-pill">{{student.age}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

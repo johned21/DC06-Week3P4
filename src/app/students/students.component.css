@@ -1,0 +1,27 @@
+.btn-group {
+    float: right;
+    margin-top: -3rem;
+}
+
+.buttons {
+    float: right;
+}
+
+.buttons .btn {
+    margin-right: 5px;
+}
+
+.badge {
+    padding: 10px;
+}
+
+.coll {
+    margin-right: 2rem;
+    margin-top: 5px;
+}
+
+.card-body {
+    height: 35rem;
+    width: auto;
+    overflow: scroll;
+}
